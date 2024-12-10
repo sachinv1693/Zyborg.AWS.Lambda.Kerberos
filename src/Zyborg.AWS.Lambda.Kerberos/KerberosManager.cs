@@ -94,7 +94,7 @@ namespace Zyborg.AWS.Lambda.Kerberos
             if (!Enabled)
                 return;
 
-            _kinitArgs = $"{Options.Principal} -k";
+            _kinitArgs = $"-V -kt {Krb5KeyTabTarget} {Options.Principal}";
 
             _logger.LogInformation("Resolving Realm KDC");
             ResolveKdc();
