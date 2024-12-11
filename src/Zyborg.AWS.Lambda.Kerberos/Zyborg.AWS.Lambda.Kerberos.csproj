@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-
   <PropertyGroup>
     <PackageId>Zyborg.AWS.Lambda.Kerberos</PackageId>
     <!-- <PackageVersion>$(VersionPrefix)</PackageVersion> -->
@@ -13,7 +11,6 @@
     <!-- <PackageLicenseUrl>https://github.com/zyborg/Zyborg.AWS.Lambda.Kerberos/blob/master/LICENSE</PackageLicenseUrl> -->
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
-
   <ItemGroup>
     <!-- Native Kerberos support for Linux -->
     <Content Include="lib/libkadm5*" PackageCopyToOutput="true">
@@ -29,11 +26,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="DnsClient" Version="1.6.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
   </ItemGroup>
-
-
 </Project>
